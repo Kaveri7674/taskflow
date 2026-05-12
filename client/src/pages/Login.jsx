@@ -317,17 +317,17 @@ function Login() {
           /* ALERT */
 
           .auth-message{
-            padding:14px 18px;
+              padding:14px 18px;
 
-            border-radius:16px;
+              border-radius:16px;
 
-            text-align:center;
+              text-align:center;
 
-            font-size:14px;
-            font-weight:700;
+              font-size:14px;
+              font-weight:700;
 
-            animation:fadeAlert 0.35s ease;
-          }
+              animation:fadeAlert 0.35s ease;
+            }
 
           .success-message{
             background:
