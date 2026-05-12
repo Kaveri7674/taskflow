@@ -41,7 +41,7 @@ function Register() {
     try {
 
       const res = await axios.post(
-        "/api/auth/register",
+        "https://taskflow-z83b.onrender.com/api/auth/register",
         formData
       );
 

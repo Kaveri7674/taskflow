@@ -55,7 +55,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-          "http://localhost:5000/api/auth/login",
+          "https://taskflow-z83b.onrender.com/api/auth/login",
           formData
         );
 
@@ -398,9 +398,10 @@ function Login() {
 
 
           <form
-            onSubmit={handleSubmit}
-            className="auth-form"
-          >
+               onSubmit={handleSubmit}
+               className="auth-form"
+               autoComplete="off"
+             >
 
             <input
               type="email"
@@ -408,6 +409,7 @@ function Login() {
               placeholder="Enter email"
               className="auth-input"
               onChange={handleChange}
+              autoComplete="off"
             />
 
             <input
@@ -416,6 +418,7 @@ function Login() {
               placeholder="Enter password"
               className="auth-input"
               onChange={handleChange}
+              autoComplete="new-password"
             />
 
 

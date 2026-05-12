@@ -68,7 +68,7 @@ function Dashboard() {
     try {
 
       const res = await axios.get(
-         "/api/tasks",
+         "https://taskflow-z83b.onrender.com/api/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-           "/api/tasks",
+           "https://taskflow-z83b.onrender.com/api/tasks",
         {
           title,
           priority,
@@ -156,7 +156,7 @@ function Dashboard() {
     try {
 
       await axios.put(
-        `/api/tasks/${id}`,
+        `https://taskflow-z83b.onrender.com/api//tasks/${id}`,
         {},
         {
            headers: {
@@ -190,7 +190,7 @@ function Dashboard() {
     try {
 
       await axios.delete(
-        `/api/tasks/${id}`,
+        `https://taskflow-z83b.onrender.com/api/tasks/${id}`,
         {
            headers: {
             Authorization: `Bearer ${token}`,
@@ -239,7 +239,7 @@ function Dashboard() {
     try {
 
       await axios.patch(
-        `/api/tasks/${editingTask._id}`,
+        `https://taskflow-z83b.onrender.com/api/tasks/${editingTask._id}`,
         {
           title: editTitle,
           priority: editPriority,
