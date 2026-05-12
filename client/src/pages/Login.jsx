@@ -317,15 +317,18 @@ function Login() {
           /* ALERT */
 
           .auth-message{
-              padding:14px 18px;
-
-              border-radius:16px;
-
-              text-align:center;
-
+              position:fixed;
+              top:20px;
+              right:20px;
+              padding:12px 18px;
+              border-radius:14px;
               font-size:14px;
-              font-weight:700;
-
+              font-weight:600;
+              color:white;
+              z-index:9999;
+              min-width:240px;
+              box-shadow:
+                0 10px 24px rgba(0,0,0,0.18);
               animation:fadeAlert 0.35s ease;
             }
 
@@ -349,6 +352,16 @@ function Login() {
               );
 
             color:white;
+          }
+
+          .inline-error{
+            color:#ef4444;
+            font-size:13px;
+            font-weight:600;
+            margin-top:-8px;
+            margin-left:4px;
+            text-align:left;
+            animation:fadeAlert 0.25s ease;
           }
 
           @keyframes fadeAuth{
@@ -421,22 +434,13 @@ function Login() {
               autoComplete="new-password"
             />
 
+              {message && (
 
+                <p className="inline-error">
+                  {message}
+                </p>
 
-            {message && (
-
-              <div
-                className={
-                  messageType === "success"
-                    ? "auth-message success-message"
-                    : "auth-message error-message"
-                }
-              >
-                {message}
-              </div>
-
-            )}
-
+              )}
 
 
             <button className="auth-btn">
