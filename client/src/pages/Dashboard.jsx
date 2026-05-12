@@ -68,7 +68,7 @@ function Dashboard() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/tasks",
+         "/api/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ function Dashboard() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/tasks",
+           "/api/tasks",
         {
           title,
           priority,
@@ -156,7 +156,7 @@ function Dashboard() {
     try {
 
       await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `/api/tasks/${id}`,
         {},
         {
            headers: {
@@ -190,7 +190,7 @@ function Dashboard() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/tasks/${id}`,
+        `/api/tasks/${id}`,
         {
            headers: {
             Authorization: `Bearer ${token}`,
@@ -239,7 +239,7 @@ function Dashboard() {
     try {
 
       await axios.patch(
-        `http://localhost:5000/api/tasks/${editingTask._id}`,
+        `/api/tasks/${editingTask._id}`,
         {
           title: editTitle,
           priority: editPriority,
